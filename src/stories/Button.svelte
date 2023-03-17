@@ -29,7 +29,7 @@
 		@apply px-6 py-3;
 	}
 	.small {
-		@apply px-4 py-2;
+		@apply px-4 py-2 font-medium text-sm;
 	}
 	.large {
 		@apply px-8 py-3;

@@ -19,13 +19,13 @@
 		<div class="">{title}</div>
 		<div class="h-[32px] w-[32px] text-gray-800">
 			{#if open}
-				<div in:fade={{ duration: 500 }}>
+				<div in:fade|global={{ duration: 500 }}>
 					<!--               <IoIosArrowUp></IoIosArrowUp>
             -->
 					close
 				</div>
 			{:else}
-				<div in:fade={{ duration: 500 }}>
+				<div in:fade|global={{ duration: 500 }}>
 					<!--
                <IoIosArrowDown></IoIosArrowDown>
                 --> open

@@ -6,8 +6,10 @@
 	function toggle_closed(): void {
 		open = !open;
 	}
-	//  import IoIosArrowDown from 'svelte-icons/io/IoIosArrowDown.svelte'
-	//import IoIosArrowUp from 'svelte-icons/io/IoIosArrowUp.svelte'
+
+	// look nice
+	import chevron_down from './chevron-down.svg';
+	import chevron_up from './chevron-up.svg';
 	import { fade } from 'svelte/transition';
 </script>
 
@@ -19,21 +21,17 @@
 		<div class="">{title}</div>
 		<div class="h-[32px] w-[32px] text-gray-800">
 			{#if open}
-				<div in:fade|global={{ duration: 500 }}>
-					<!--               <IoIosArrowUp></IoIosArrowUp>
-            -->
-					close
+				<div in:fade={{ duration: 500 }}>
+					<img src={chevron_up} alt="Open" />
 				</div>
 			{:else}
-				<div in:fade|global={{ duration: 500 }}>
-					<!--
-               <IoIosArrowDown></IoIosArrowDown>
-                --> open
+				<div in:fade={{ duration: 500 }}>
+					<img src={chevron_down} alt="Close" />
 				</div>
 			{/if}
 		</div>
 	</button>
 	{#if open}
-		<div class="pb-6 px-6  ">{content}</div>
+		<div class="pb-6 px-6">{content}</div>
 	{/if}
 </div>

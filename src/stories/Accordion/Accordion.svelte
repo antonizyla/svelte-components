@@ -56,9 +56,9 @@
 	}
 </script>
 
-<div class="divide-y divide-gray-600 divide-2 m-2 p-2 ">
+<div class="divide-y divide-gray-600 divide-2 m-2 p-2">
 	{#each accordionItems as item}
-		<div class="first:mt-2 mx-2 last:mb-2 ">
+		<div class="first:mt-2 mx-2 last:mb-2">
 			<AccordionItem title={item.title} content={item.content} bind:open={item.open} />
 		</div>
 	{/each}

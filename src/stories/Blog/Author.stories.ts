@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import Author from './Author.svelte';
 
 const meta = {
-    title: 'Author',
+    title: 'Blog/Author',
     component: Author,
     tags: ['autodocs'],
     argTypes: {

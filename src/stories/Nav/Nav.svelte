@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '../Button.svelte';
+	import Button from '../Button/Button.svelte';
 
 	export let mainLinks: { href: string; label: string }[] = [];
 	export let ctaLinks: { href: string; label: string; primary: boolean }[] = [];
@@ -31,9 +31,9 @@
 				</div>
 			</div>
 			<!-- Secondary Navbar items (cta etc..)) -->
-			<div class="hidden md:flex items-center space-x-3 ">
+			<div class="hidden md:flex items-center space-x-3">
 				{#each ctaLinks as ctaItem}
-					<Button primary={ctaItem.primary} size="small" label={ctaItem.label}></Button>
+					<Button primary={ctaItem.primary} size="small" label={ctaItem.label} />
 				{/each}
 			</div>
 			<!-- Mobile menu button -->

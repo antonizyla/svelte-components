@@ -11,7 +11,7 @@
 	<div class="py-3">
 		<img class="rounded-full drop-shadow-md" src={avatar} alt={`Image of ${name}`} />
 	</div>
-	<div class="flex flex-col gap-1 justify-between max-w-sm p-2 py-6 ">
+	<div class="flex flex-col gap-1 justify-between max-w-sm p-2 py-6">
 		<h2 class="text-2xl underline underline-offset-[12px]">{name}</h2>
 		<p>{bio}</p>
 		<p class="text-gray-700 text-lg text-right px-6">{email}</p>

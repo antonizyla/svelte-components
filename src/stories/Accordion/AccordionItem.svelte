@@ -7,7 +7,7 @@
 		open = !open;
 	}
 
-	// look nice
+	// make it look nice
 	import chevron_down from './chevron-down.svg';
 	import chevron_up from './chevron-up.svg';
 	import { fade } from 'svelte/transition';

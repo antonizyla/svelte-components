@@ -7,7 +7,6 @@ const meta = {
     component: Accordion,
     tags: ['autodocs'],
     argTypes: {
-        backgroundColor: { control: 'text' },
     },
 } satisfies Meta<Accordion>;
 

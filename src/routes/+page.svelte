@@ -1,3 +1,12 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Image from '../stories/Images/Image.svelte';
+
+	import img1 from '$images/sampleImage.jpg?format=avif;webp&w=400;1200&picture';
+</script>
+
+<!-- 
+<Image src={img1} alt="hello" />
+<-->
+<div class="w-5/12">
+	<Image data={img1} title="hello there" description="hello again" alt="hello" />
+</div>

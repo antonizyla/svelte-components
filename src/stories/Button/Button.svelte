@@ -1,43 +1,47 @@
 <script lang="ts">
 	import '../../app.css';
 
-	export let primary = false;
-	export let backgroundColor: string | undefined = undefined;
+	export let primary: boolean = false;
+	export let rounded: boolean = false;
 	export let size: 'small' | 'medium' | 'large' = 'medium';
 	export let label: string = '';
 
 	$: mode = primary ? 'primary' : 'secondary';
-
-	$: style = backgroundColor ? `background-color: ${backgroundColor}` : '';
 </script>
 
-<button type="button" class={['button', size, mode].join(' ')} {style} on:click>
+<button
+	type="button"
+	class={['button', size, mode].join(' ')}
+	class:rounded-full={rounded}
+	class:rounded-md={!rounded}
+	on:click
+>
 	{label}
 </button>
 
 <style lang="postcss">
 	.button {
-		@apply border-0 rounded-full inline-block cursor-pointer font-bold font-sans;
+		@apply inline-block cursor-pointer font-medium font-sans text-text;
 	}
 	.primary {
-		@apply text-white bg-blue-500;
+		@apply bg-primary ease-out transition duration-200;
 	}
 	.secondary {
-		@apply bg-white border-2 border-blue-500;
+		@apply bg-secondary ease-out transition duration-200;
 	}
 	.medium {
 		@apply px-6 py-3;
 	}
 	.small {
-		@apply px-4 py-2 font-medium text-sm;
+		@apply px-4 py-2 text-sm;
 	}
 	.large {
 		@apply px-8 py-3;
 	}
 	.button.primary:hover {
-		@apply bg-blue-600;
+		@apply scale-105 transition duration-200 shadow-2xl shadow-primary/[90%] ease-in;
 	}
 	.button.secondary:hover {
-		@apply bg-blue-100;
+		@apply scale-105 transition duration-200 shadow-xl shadow-secondary/60 ease-in;
 	}
 </style>

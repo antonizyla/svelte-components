@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Image from '../Images/Image.svelte';
+
 	export let name: string;
 	export let email: string;
 	export let avatar: string;
@@ -6,10 +8,10 @@
 </script>
 
 <div
-	class="flex-row flex p-4 gap-5 w-fit rounded-xl bg-gray-100 shadow-gray-100 drop-shadow-lg border-gray-100 border"
+	class="flex-row flex p-4 gap-5 w-fit rounded-md bg-background shadow-background/70 drop-shadow-lg"
 >
-	<div class="py-3">
-		<img class="rounded-full drop-shadow-md" src={avatar} alt={`Image of ${name}`} />
+	<div class="p-3 rounded-full">
+		<Image pad={false} round={true} data={avatar} alt={`Image of ${name}`} />
 	</div>
 	<div class="flex flex-col gap-1 justify-between max-w-sm p-2 py-6">
 		<h2 class="text-2xl underline underline-offset-[12px]">{name}</h2>

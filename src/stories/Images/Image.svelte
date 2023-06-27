@@ -13,6 +13,7 @@
 	export let title: string = '';
 	export let description: string = '';
 	export let pad: boolean = true;
+	export let round: boolean = false;
 </script>
 
 <div class="text-center" class:p-4={pad}>
@@ -25,7 +26,7 @@
 					type="image/{format}"
 				/>
 			{/each}
-			<img class:rounded-md={pad} {alt} src={data.fallback.src} />
+			<img class:rounded-md={pad} class:rounded-full={!pad && round} {alt} src={data.fallback.src} />
 		</picture>
 	</div>
 	<div class="p-2 text-gray-800 text-md">{description}</div>

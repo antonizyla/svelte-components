@@ -1,20 +1,8 @@
 <script lang="ts">
-	export let opened: boolean = false;
-
-	let dialog: HTMLDialogElement;
-
-	$: if (dialog && opened) dialog.showModal();
+	export let dialog: HTMLDialogElement;
 </script>
 
-<button
-	on:click={() => {
-		opened = true;
-	}}
->
-	Open Modal
-</button>
-
-<dialog bind:this={dialog} on:close={() => (opened = false)} on:click|self={() => dialog.close()}>
+<dialog class="rounded-lg" bind:this={dialog} on:click|self={() => dialog.close()}>
 	<div on:click|stopPropagation>
 		<slot />
 	</div>

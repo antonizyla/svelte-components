@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 import CheckBox from './CheckBox.svelte';
 
 const meta: Meta = {
-	title: 'CheckBox',
+	title: 'Form/CheckBox',
 	component: CheckBox,
 	argTypes: {
 		label: { control: 'text' },

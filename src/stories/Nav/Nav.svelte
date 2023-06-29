@@ -12,8 +12,7 @@
 	}
 </script>
 
-<!-- Add shadow or colour here -->
-<nav class="" class:bg-white={open} class:h-screen={open}>
+<nav class="text-text" class:bg-background={open} class:h-screen={open}>
 	<div class="max-w-6xl mx-auto px-4">
 		<div class="flex justify-between">
 			<div class="flex space-x-7">
@@ -23,12 +22,12 @@
 						<h2>{title}</h2>
 					</a>
 				</div>
-				<!-- Primary Navbar items -->
-				<div class="hidden md:flex items-center space-x-1">
-					{#each mainLinks as item}
-						<a href={item.href} class="py-4 px-2 font-semibold">{item.label}</a>
-					{/each}
-				</div>
+			</div>
+			<!-- Primary Navbar items -->
+			<div class="hidden md:flex items-center space-x-1">
+				{#each mainLinks as item}
+					<a href={item.href} class="py-4 px-2 font-semibold">{item.label}</a>
+				{/each}
 			</div>
 			<!-- Secondary Navbar items (cta etc..)) -->
 			<div class="hidden md:flex items-center space-x-3">

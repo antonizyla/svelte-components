@@ -7,9 +7,6 @@
 
 <style lang="postcss">
 	input[type='file']::file-selector-button {
-		@apply border-2 border-red-50 bg-white rounded-full inline-block cursor-pointer font-bold font-sans px-6 py-3 mr-10;
-	}
-	input[type='file']::file-selector-button:hover {
-		@apply bg-blue-100;
+		@apply border-2 bg-secondary rounded-md inline-block cursor-pointer px-6 py-3 mr-10 scale-105 transition duration-200 shadow-2xl shadow-secondary ease-in border-secondary;
 	}
 </style>

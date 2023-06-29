@@ -34,7 +34,7 @@
 	</div>
 	<input
 		bind:value={input}
-		class="p-3 border-blue-600 border-2 min-w-full rounded-md shadow-sm"
+		class="p-3 border-text/40 border-2 min-w-full rounded-md shadow-sm"
 		class:border-red-400={!valid}
 		type="text"
 		{name}

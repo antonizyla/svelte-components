@@ -26,7 +26,12 @@
 					type="image/{format}"
 				/>
 			{/each}
-			<img class:rounded-md={pad} class:rounded-full={!pad && round} {alt} src={data.fallback.src} />
+			<img
+				class:rounded-md={pad}
+				class:rounded-full={!pad && round}
+				{alt}
+				src={data.fallback.src}
+			/>
 		</picture>
 	</div>
 	<div class="p-2 text-gray-800 text-md">{description}</div>

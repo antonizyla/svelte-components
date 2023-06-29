@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="flex-row flex p-4 gap-5 w-fit shadow shadow-inner-md rounded-lg bg-secondary/20 shadow-secondary/70 drop-shadow-lg"
+	class="flex-row flex p-4 gap-5 w-fit shadow shadow-inner-md rounded-lg bg-secondary shadow-secondary/70 drop-shadow-lg"
 >
 	<div class="p-3 rounded-full shadow-text drop-shadow-xl">
 		<Image pad={false} round={true} data={avatar} alt={`Image of ${name}`} />

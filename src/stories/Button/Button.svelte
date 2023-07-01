@@ -24,10 +24,10 @@
 		@apply inline-block cursor-pointer font-medium font-sans text-text;
 	}
 	.primary {
-		@apply bg-primary ease-out transition duration-200;
+		@apply bg-primary-button ease-out transition duration-200;
 	}
 	.secondary {
-		@apply bg-secondary ease-out transition duration-200;
+		@apply bg-secondary-button ease-out transition duration-200;
 	}
 	.medium {
 		@apply px-6 py-3;
@@ -39,9 +39,9 @@
 		@apply px-8 py-3;
 	}
 	.button.primary:hover {
-		@apply scale-105 transition duration-200 shadow-2xl shadow-primary/[90%] ease-in;
+		@apply scale-105 transition duration-200 shadow-2xl shadow-primary-button/[90%] ease-in;
 	}
 	.button.secondary:hover {
-		@apply scale-105 transition duration-200 shadow-xl shadow-secondary/60 ease-in;
+		@apply scale-105 transition duration-200 shadow-xl shadow-secondary-button/60 ease-in;
 	}
 </style>

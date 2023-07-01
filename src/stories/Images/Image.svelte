@@ -34,5 +34,5 @@
 			/>
 		</picture>
 	</div>
-	<div class="p-2 text-gray-800 text-md">{description}</div>
+	<div class="p-2 text-text-800 text-md">{description}</div>
 </div>

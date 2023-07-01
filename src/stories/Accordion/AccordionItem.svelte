@@ -21,11 +21,11 @@
 		<div class="">{title}</div>
 		<div class="h-[32px] w-[32px]">
 			{#if open}
-				<div class="" in:fade={{ duration: 500 }}>
+				<div class="" in:fade|global={{ duration: 500 }}>
 					<Chevron_up />
 				</div>
 			{:else}
-				<div in:fade={{ duration: 500 }}>
+				<div in:fade|global={{ duration: 500 }}>
 					<Chevron_down />
 				</div>
 			{/if}

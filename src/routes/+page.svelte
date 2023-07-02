@@ -1,6 +1,13 @@
 <script lang="ts">
-	import Image from '$lib/components/Images/Image.svelte';
-	import sample from '$lib/components/Images/sampleImage.jpg?picture';
+	import '../app.css';
+
+	import Darkmode from '$lib/components/DarkMode/Darkmode.svelte';
 </script>
 
-<Image data={sample} pad round alt="Hello" title="hello again" description="description" />
+<Darkmode />
+
+<div class="dark:bg-red-50 font-semibold font-xl">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam provident, ullam repellendus
+	eligendi maxime autem facilis dolore accusantium corporis minima illo deserunt ab quae voluptas
+	alias nesciunt porro, rerum adipisci!
+</div>

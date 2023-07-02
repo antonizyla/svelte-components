@@ -1,11 +1,9 @@
 <script lang="ts">
-    import Image from '$lib/Images/Image.svelte'
-    import sample from '$lib/Images/sample2.jpg?picture'
+	import Image from '$lib/Images/Image.svelte';
+	import sample from '$lib/Images/sample2.jpg?picture';
 </script>
 
-<Image data={sample}></Image>
-
-
+<Image data={sample} />
 
 <h1>Welcome to your library project</h1>
 <p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>

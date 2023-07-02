@@ -1,22 +1,15 @@
-import Image from 'Images/Image.svelte'
+export { Accordion, AccordionItem } from './components/Accordion';
 
-import Cards from 'Cards/Cards.svelte'
-import Card from 'Cards/Card.svelte'
+export { Alert, Cookies } from './components/Alert';
 
-import Accordion from 'Accordion/Accordion.svelte'
-import AccordionItem from 'Accordion/AccordionItem.svelte'
+export { AuthorCard } from './components/Blog';
 
-import Button from 'Button/Button.svelte'
+export { Button } from './components/Button';
 
-import AuthorCard from 'Blog/Author.svelte'
+export { Card, Cards } from './components/Cards';
 
-import Checkbox from 'Form/CheckBox.svelte'
-import DatePicker from 'Form/DatePicker.svelte'
-import Input from 'Form/TextInput.svelte'
-import Radio from 'Form/RadioButtons.svelte'
-import FileUpload from 'Form/FileUpload.svelte'
+export { Nav } from './components/Nav';
 
-import Navbar from 'Nav/Nav.svelte'
+export { CheckBox, DatePicker, FileUpload, RadioButtons, TextInput } from './components/Form';
 
-
-export { Image, Cards, Card, Accordion, AccordionItem, Button, AuthorCard, Checkbox, DatePicker, Input, Radio, FileUpload, Navbar }
+export { Image } from './components/Images';

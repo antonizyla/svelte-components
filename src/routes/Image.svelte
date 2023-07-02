@@ -1,9 +1,10 @@
-<script>export let data;
-export let alt = "";
-export let title = "";
-export let description = "";
-export let pad = true;
-export let round = false;
+<script>
+	export let data;
+	export let alt = '';
+	export let title = '';
+	export let description = '';
+	export let pad = true;
+	export let round = false;
 </script>
 
 <div class="text-center" class:p-4={pad}>

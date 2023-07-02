@@ -1,22 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
-	theme: {
-		extend: {
-			colors: {
-				text: '#040d1b',
-				background: '#e9f0fc',
-				'primary-button': '#erc283',
-				'secondary-button': '#d7e5f9',
-				accent: '#ecc283'
-			}
-		},
-		fontFamily: {
-			sans: ['Inter', 'sans-serif'],
-			serif: ['ui-serif', 'Georgia'],
-			mono: ['ui-monospace', 'SFMono-Regular']
-		}
-	},
-	plugins: []
+    content: ['./src/**/*.{html,js,svelte,ts}'],
+    theme: {
+        extend: {
+            colors: {
+                'text': '#0f0f1f',
+                'background': '#f8f8fc',
+                'primary-button': '#8d8fc8',
+                'secondary-button': '#eeeef7',
+                'accent': '#9fa0d1',
+            }
+        },
+        fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['ui-serif', 'Georgia'],
+            mono: ['ui-monospace', 'SFMono-Regular']
+        }
+    },
+    plugins: []
 };

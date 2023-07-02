@@ -37,7 +37,7 @@
 		@apply px-8 py-3;
 	}
 	.button.primary:hover {
-		@apply scale-105 transition duration-200 shadow-2xl shadow-primary-button/[90%] ease-in;
+		@apply scale-105 transition duration-200 shadow-2xl shadow-primary-button/90 ease-in;
 	}
 	.button.secondary:hover {
 		@apply scale-105 transition duration-200 shadow-xl shadow-secondary-button/60 ease-in;

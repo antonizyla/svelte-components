@@ -1,10 +1,6 @@
 <script lang="ts">
-	import Image from '$lib/Images/Image.svelte';
-	import sample from '$lib/Images/sample2.jpg?picture';
+	import Image from '$lib/components/Images/Image.svelte';
+	import sample from '$lib/components/Images/sampleImage.jpg?picture';
 </script>
 
-<Image data={sample} />
-
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<Image data={sample} pad round alt="Hello" title="hello again" description="description" />

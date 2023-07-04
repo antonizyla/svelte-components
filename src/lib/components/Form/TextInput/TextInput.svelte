@@ -25,16 +25,16 @@
 	$: validateMessage(input);
 </script>
 
-<div class="flex flex-col w-full p-2">
+<div class="flex w-full flex-col p-2">
 	<div class="flex flex-row">
 		<div class="p-1">{label}</div>
 		{#if required}
-			<div class="text-red-400 text-sm text-center p-1">*</div>
+			<div class="p-1 text-center text-sm text-red-400">*</div>
 		{/if}
 	</div>
 	<input
 		bind:value={input}
-		class="p-3 border-text/40 border-2 min-w-full rounded-md shadow-sm"
+		class="min-w-full rounded-md border-2 border-text/40 p-3 shadow-sm"
 		class:border-red-400={!valid}
 		type="text"
 		{name}
@@ -44,6 +44,6 @@
 		autocomplete={autocomplete ? 'on' : 'off'}
 	/>
 	{#if !valid}
-		<div class="text-red-400 text-sm text-center p-1">{validationMessage}</div>
+		<div class="p-1 text-center text-sm text-red-400">{validationMessage}</div>
 	{/if}
 </div>

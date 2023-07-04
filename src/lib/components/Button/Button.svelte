@@ -1,31 +1,23 @@
 <script lang="ts">
 	export let primary: boolean = false;
-	export let rounded: boolean = false;
 	export let size: 'small' | 'medium' | 'large' = 'medium';
 	export let label: string = '';
+	export let classes: string = '';
 
 	$: mode = primary ? 'primary' : 'secondary';
 </script>
 
-<button
-	type="button"
-	class={['button', size, mode].join(' ')}
-	class:rounded-full={rounded}
-	class:rounded-md={!rounded}
-	on:click
->
-	{label}
-</button>
+<button type="button" class={['button', size, mode, classes].join(' ')} on:click> <slot /></button>
 
 <style lang="postcss">
 	.button {
-		@apply inline-block cursor-pointer font-medium font-sans text-text;
+		@apply inline-block cursor-pointer rounded-md font-sans font-medium text-text;
 	}
 	.primary {
-		@apply bg-primary-button ease-out transition duration-200;
+		@apply bg-primary-button transition duration-200 ease-out;
 	}
 	.secondary {
-		@apply bg-secondary-button ease-out transition duration-200;
+		@apply bg-secondary-button transition duration-200 ease-out;
 	}
 	.medium {
 		@apply px-6 py-3;
@@ -37,9 +29,9 @@
 		@apply px-8 py-3;
 	}
 	.button.primary:hover {
-		@apply scale-105 transition duration-200 shadow-2xl shadow-primary-button/90 ease-in;
+		@apply scale-105 shadow-2xl shadow-primary-button/90 transition duration-200 ease-in;
 	}
 	.button.secondary:hover {
-		@apply scale-105 transition duration-200 shadow-xl shadow-secondary-button/60 ease-in;
+		@apply scale-105 shadow-xl shadow-secondary-button/60 transition duration-200 ease-in;
 	}
 </style>

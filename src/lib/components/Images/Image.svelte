@@ -6,8 +6,10 @@
 
 	import type { Picture } from 'vite-imagetools';
 
-	export let data: Picture;
+	export let src: Picture;
 	export let alt: string = '';
+
+	export let loading: 'lazy' | 'eager' = 'lazy';
 
 	// picture frame stuff
 	export let title: string = '';
@@ -20,7 +22,7 @@
 	<div class="p-2.5">{title}</div>
 	<div class="">
 		<picture class="w-fit">
-			{#each Object.entries(data.sources) as [format, images]}
+			{#each Object.entries(src.sources) as [format, images]}
 				<source
 					srcset={images.map((img) => `${img.src} ${img.w}w`).join(', ')}
 					type="image/{format}"
@@ -29,10 +31,13 @@
 			<img
 				class:rounded-md={pad}
 				class:rounded-full={!pad && round}
+				{loading}
 				{alt}
-				src={data.fallback.src}
+				src={src.fallback.src}
+				width={src.fallback.w}
+				height={src.fallback.h}
 			/>
 		</picture>
 	</div>
-	<div class="p-2 text-text-800 text-md">{description}</div>
+	<div class="text-text-800 text-md p-2">{description}</div>
 </div>

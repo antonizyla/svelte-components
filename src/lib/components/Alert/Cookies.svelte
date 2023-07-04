@@ -43,7 +43,7 @@
 {/if}
 
 <Alert bind:dialog>
-	<div class=" flex flex-col gap-4 text-text p-4 max-w-md">
+	<div class=" flex max-w-md flex-col gap-4 p-4 text-text">
 		<div class="text-2xl font-bold">Cookie Policy</div>
 		<div class="pb-5">
 			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore voluptas quasi atque ipsam,

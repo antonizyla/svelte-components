@@ -8,14 +8,14 @@
 </script>
 
 <div
-	class="flex-row flex p-4 gap-5 w-fit shadow shadow-inner-md rounded-lg bg-secondary-button shadow-secondary-button/70 drop-shadow-lg"
+	class="shadow-inner-md flex w-fit flex-row gap-5 rounded-lg bg-secondary-button p-4 shadow shadow-secondary-button/70 drop-shadow-lg"
 >
-	<div class="p-3 rounded-full shadow-text drop-shadow-xl">
-		<Image pad={false} round={true} data={avatar} alt={`Image of ${name}`} />
+	<div class="rounded-full p-3 shadow-text drop-shadow-xl">
+		<Image pad={false} round={true} src={avatar} alt={`Image of ${name}`} />
 	</div>
-	<div class="flex flex-col gap-1 justify-between max-w-sm p-2 py-6">
+	<div class="flex max-w-sm flex-col justify-between gap-1 p-2 py-6">
 		<h2 class="text-2xl underline underline-offset-[12px]">{name}</h2>
 		<p>{bio}</p>
-		<p class="text-text/70 text-lg text-right px-6">{email}</p>
+		<p class="px-6 text-right text-lg text-text/70">{email}</p>
 	</div>
 </div>

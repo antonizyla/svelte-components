@@ -8,7 +8,9 @@
 </script>
 
 <div class="text-center" class:p-4={pad}>
-	<div class="p-2.5">{title}</div>
+	{#if title != ''}
+		<div class="p-2.5">{title}</div>
+	{/if}
 	<div class="">
 		<picture class="w-fit">
 			{#each Object.entries(data.sources) as [format, images]}
@@ -25,5 +27,7 @@
 			/>
 		</picture>
 	</div>
-	<div class="p-2 text-text-800 text-md">{description}</div>
+	{#if description != ''}
+		<div class="text-text-800 text-md p-2">{description}</div>
+	{/if}
 </div>

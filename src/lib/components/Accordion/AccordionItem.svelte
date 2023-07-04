@@ -16,7 +16,7 @@
 <div class="">
 	<button
 		on:click={() => toggle_closed()}
-		class={['p-4 w-full flex flex-row justify-between'].join(' ')}
+		class={['flex w-full flex-row justify-between p-4'].join(' ')}
 	>
 		<div class="">{title}</div>
 		<div class="h-[32px] w-[32px]">
@@ -32,6 +32,6 @@
 		</div>
 	</button>
 	{#if open}
-		<div class="pb-6 px-6">{content}</div>
+		<div class="px-6 pb-6">{content}</div>
 	{/if}
 </div>

@@ -3,7 +3,7 @@
 	export let checked: boolean = false;
 </script>
 
-<label class="m-4 p-4 flex flex-row align-middle container" for={label}>
+<label class="container m-4 flex flex-row p-4 align-middle" for={label}>
 	<input class="m-3" type="checkbox" name={label} value={label} bind:checked />
 	<span class="checkmark" />
 	<div class="m-3">

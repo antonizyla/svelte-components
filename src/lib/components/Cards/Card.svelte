@@ -4,12 +4,12 @@
 </script>
 
 <div
-	class="flex flex-col text-center shadow-secondary-button p-4 bg-secondary-button/95 rounded-md drop-shadow-sm shadow-sm justify-stretch min-w-[16rm]"
+	class="flex min-w-[16rm] flex-col justify-stretch rounded-md bg-secondary-button/95 p-4 text-center shadow-sm shadow-secondary-button drop-shadow-sm"
 >
-	<div class="font-bold text-text p-2">
+	<div class="p-2 font-bold text-text">
 		{title}
 	</div>
-	<div class="text-text/80 p-2 max-w-[40ch]">
+	<div class="max-w-[40ch] p-2 text-text/80">
 		{content}
 	</div>
 </div>

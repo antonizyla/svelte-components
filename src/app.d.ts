@@ -9,4 +9,9 @@ declare global {
 	}
 }
 
+declare module '*picture' {
+	const out;
+	export default out;
+}
+
 export {};

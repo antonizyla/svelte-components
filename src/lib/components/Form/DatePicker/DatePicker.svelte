@@ -12,7 +12,7 @@
 		{label}
 	</label>
 	<input
-		class="border-2 border-text/60 p-2 rounded-md px-4"
+		class="rounded-md border-2 border-text/60 p-2 px-4"
 		type="date"
 		{name}
 		{value}

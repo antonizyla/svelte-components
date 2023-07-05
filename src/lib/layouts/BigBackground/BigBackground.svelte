@@ -21,7 +21,7 @@
 
 <div class="!flex min-h-screen w-full flex-col bg-cover bg-center" id="container">
 	<Nav
-		classes="bg-background-100"
+		classes=""
 		title={navContent.title}
 		ctaLinks={navContent.ctaLinks}
 		mainLinks={navContent.mainLinks}
@@ -38,6 +38,3 @@
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-</style>

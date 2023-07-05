@@ -42,18 +42,18 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<div class="bg-wrapper flex min-h-screen flex-col justify-between max-md:table" id="wholeCta">
+<div class="flex min-h-screen w-full flex-col" id="wholeCta">
 	<Nav
-		classes="max-md:table-row bg-background"
+		classes="bg-background"
 		mainLinks={navData.mainLinks}
 		ctaLinks={navData.ctaLinks}
 		title={navData.title}
 		sticky={stickyNav}
 	/>
-	<div id="central-content" class="max-md:table-row max-md:h-full max-md:text-background">
-		<div class=" max-md:py-60 md:flex md:flex-row-reverse md:flex-wrap md:justify-center md:gap-8">
+	<div id="central-content" class="flex flex-grow justify-center bg-cover bg-center">
+		<div class="mx-auto flex flex-row flex-wrap items-center justify-center">
 			<div
-				class="flex w-[100vw] flex-col justify-center gap-6 p-10 py-12 text-center md:w-5/12 md:p-4 md:text-left"
+				class="flex w-[100vw] flex-col justify-center gap-6 p-10 py-12 text-center max-md:text-background md:w-5/12 md:p-4 md:text-left"
 			>
 				<h1 class="text-3xl font-extrabold">Welcome to Website</h1>
 				<p class="max-w-prose">
@@ -73,16 +73,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- used for flexbox spacing, ignore -->
-	<div class="bg-red-600" />
-	<div class="bg-red-700" />
 </div>
-
-<style lang="postcss">
-	.bg-wrapper {
-		background-position: center center;
-		background-size: cover;
-		width: 100%;
-		min-height: 100%;
-	}
-</style>

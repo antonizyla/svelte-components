@@ -58,7 +58,7 @@
 		</div>
 	</div>
 	<!-- mobile menu -->
-	<div class:hidden={!open} class="absolute top-[35%] px-4">
+	<div class:hidden={!open} class="absolute top-[35%] h-[100vh] px-4">
 		<ul class="">
 			{#each mainLinks as item}
 				<li>

@@ -26,7 +26,7 @@
 		@apply px-4 py-2 text-sm;
 	}
 	.large {
-		@apply px-8 py-3;
+		@apply px-8 py-4;
 	}
 	.button.primary:hover {
 		@apply scale-105 shadow-2xl shadow-primary/90 transition duration-200 ease-in;

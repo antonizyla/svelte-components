@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/Button/Button.svelte';
+	import Button from '../Button/Button.svelte';
 
 	import HamburgerMenu from './HamburgerMenu.svelte';
 	import MinimiseHamburgerMenu from './MinimiseHamburger.svelte';
@@ -9,6 +9,7 @@
 	export let title: string;
 	export let classes: string = '';
 	export let sticky: boolean = false;
+    export let overImage: boolean = false;
 
 	let open: boolean = false;
 
@@ -28,7 +29,7 @@
 			<div class="flex space-x-7">
 				<div>
 					<!-- Website Logo -->
-					<a href="/" class="flex items-center px-2 py-4">
+					<a href="/" class="flex items-center px-2 py-4" class:text-background={overImage && !open}>
 						<h2>{title}</h2>
 					</a>
 				</div>
@@ -46,8 +47,8 @@
 				{/each}
 			</div>
 			<!-- Mobile menu button -->
-			<div class="flex items-center md:hidden">
-				<button on:click={toggleNav} class="mobile-menu-button outline-none">
+			<div class="flex items-center md:hidden" >
+				<button on:click={toggleNav} class="mobile-menu-button outline-none" class:text-background={!open && overImage}>
 					{#if !open}
 						<HamburgerMenu />
 					{:else}

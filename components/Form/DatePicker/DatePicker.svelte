@@ -5,6 +5,7 @@
 	export let minVal: Date = new Date(1900, 0, 1);
 	export let maxVal: Date = new Date(2100, 0, 1);
 	export let value: Date = new Date();
+
 </script>
 
 <div class="p-4">
@@ -15,8 +16,8 @@
 		class="rounded-md border-2 border-text/60 p-2 px-4"
 		type="date"
 		{name}
-		{value}
-		min={minVal.toString()}
-		max={maxVal.toString()}
+		min={minVal.toDateString()}
+		max={maxVal.toDateString()}
+        bind:value
 	/>
 </div>

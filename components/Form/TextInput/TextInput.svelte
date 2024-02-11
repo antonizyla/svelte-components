@@ -8,11 +8,10 @@
 	export let autocomplete = false;
 	export let name: string;
 	export let regex: string = '(.)';
+	export let input:string = '';
+	let valid = true;
 
 	const re = new RegExp(regex);
-
-	let input = '';
-	let valid = true;
 
 	function validateMessage(message: string) {
 		if (validate && message.length > 0) {
@@ -33,7 +32,7 @@
 		{/if}
 	</div>
 	<input
-		bind:value={input}
+        bind:value={input}
 		class="min-w-full rounded-md border-2 border-text/40 p-3 shadow-sm"
 		class:border-red-400={!valid}
 		type="text"

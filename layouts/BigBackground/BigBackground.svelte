@@ -1,37 +1,76 @@
 <script lang="ts">
-	import navContent from './navContent.json';
+    import Nav from "../../components/Nav/Nav.svelte";
+    import Button from "../../components/Button/Button.svelte";
 
-	import Nav from '$lib/components/Nav/Nav.svelte';
-	import Button from '$lib/components/Button/Button.svelte';
+    let navContent = {
+        mainLinks: [
+            {
+                href: "#",
+                label: "Home",
+            },
+            {
+                href: "#",
+                label: "About",
+            },
+            {
+                href: "#",
+                label: "Contact",
+            },
+        ],
+        ctaLinks: [
+            {
+                href: "#",
+                label: "Sign Up",
+                primary: true,
+            },
+            {
+                href: "#",
+                label: "Log In",
+                primary: false,
+            },
+        ],
+        title: "My Website",
+    };
 
-	// @ts-ignore
-	import backgroundImage from '$lib/components/Images/sampleImage.jpg';
+    export let navMainLinks: { href: string; label: string }[] =
+        navContent.mainLinks;
+    export let navCtaLinks: {
+        href: string;
+        label: string;
+        primary: boolean;
+    }[] = navContent.ctaLinks;
+    export let navTitle: string = navContent.title;
 
-	import { onMount } from 'svelte';
+    export let mainTitle: string = "Welcome to Website";
+    export let mainText: string = `Lorem ipsum, dolor sit amet consectetur adipisicing elit.`;
+    // @ts-ignore
+    import backgroundImage from "../../components/Images/sampleImage.jpg?webp"
 
-	onMount(() => {
-		const container = document.getElementById('container');
-		//@ts-ignore container won't be null
-		container.style.backgroundImage = `url(${backgroundImage})`;
-	});
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const container = document.getElementById("container");
+        container.style.backgroundImage = `url(${backgroundImage})`;
+    });
 </script>
 
-<div class="!flex min-h-screen w-full flex-col bg-cover bg-center" id="container">
-	<Nav
-		classes=""
-		title={navContent.title}
-		ctaLinks={navContent.ctaLinks}
-		mainLinks={navContent.mainLinks}
-	/>
-	<div class=" flex flex-grow justify-center">
-		<div class="flex max-w-lg flex-col gap-6 self-center p-4 text-center">
-			<div class="text-2xl font-semibold">Welcome to Website</div>
-			<div class="">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores eius voluptate porro. Est
-				ratione ea dolorum corporis nihil repudiandae repellendus, beatae maxime cupiditate itaque
-				eum, consequatur maiores nulla blanditiis aliquid!
-			</div>
-			<Button primary classes="w-fit mx-auto">Sign Up Now</Button>
-		</div>
-	</div>
+<div
+    class="!flex min-h-screen w-full flex-col bg-cover bg-center"
+    id="container"
+>
+    <Nav
+        classes=""
+        title={navTitle}
+        ctaLinks={navCtaLinks}
+        mainLinks={navMainLinks}
+    />
+    <div class=" flex flex-grow justify-center">
+        <div class="flex max-w-lg flex-col gap-6 self-center p-4 text-center">
+            <div class="text-2xl font-semibold">{mainTitle}</div>
+            <div class="">
+                {mainText}
+            </div>
+            <Button primary classes="w-fit mx-auto">Sign Up Now</Button>
+        </div>
+    </div>
 </div>

@@ -11,6 +11,8 @@
 	export let sticky: boolean = false;
     export let overImage: boolean = false;
 
+    export let scrolledInPage: number = 0;
+
 	let open: boolean = false;
 
 	function toggleNav() {
@@ -20,7 +22,7 @@
 
 <nav
 	class={'p-4 text-text' + classes}
-	class:bg-background={open}
+	class:bg-background={open || (!open && scrolledInPage > 0 && sticky)}
 	class:h-screen={open}
 	class:sticky
 >
@@ -29,7 +31,7 @@
 			<div class="flex space-x-7">
 				<div>
 					<!-- Website Logo -->
-					<a href="/" class="flex items-center px-2 py-4" class:text-background={overImage && !open}>
+					<a href="/" class="flex items-center px-2 py-4" class:text-background={(overImage && !open && !sticky) || (scrolledInPage == 0 && sticky && !open )}>
 						<h2>{title}</h2>
 					</a>
 				</div>
@@ -48,7 +50,7 @@
 			</div>
 			<!-- Mobile menu button -->
 			<div class="flex items-center md:hidden" >
-				<button on:click={toggleNav} class="mobile-menu-button outline-none" class:text-background={!open && overImage}>
+				<button on:click={toggleNav} class="mobile-menu-button outline-none" class:text-background={(!open && overImage && !sticky)  || (scrolledInPage == 0 && sticky && !open)}>
 					{#if !open}
 						<HamburgerMenu />
 					{:else}
@@ -83,7 +85,7 @@
 	.sticky {
 		position: sticky;
 		top: 0;
-		z-index: 100;
-		@apply bg-background pb-4;
+		z-index: 1;
+		@apply pb-4;
 	}
 </style>

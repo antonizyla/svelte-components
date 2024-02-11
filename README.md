@@ -9,6 +9,7 @@
   -  Vite Imagetools for anything that uses images
   -  TailwindCSS for everything
   -  Svelte 4.0 or greater
+  -  svelte-highlight and highlight.js as dev dependancies for syntax highlighting
 
 ## Required Tailwind Config
 

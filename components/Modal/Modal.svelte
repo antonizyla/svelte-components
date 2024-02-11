@@ -1,17 +1,12 @@
 <script lang="ts">
-	export let showing: boolean;
-
-	let dialog: HTMLDialogElement;
-	$: if (dialog && showing) dialog.showModal();
+    export let dialog: HTMLDialogElement;
 </script>
 
 <dialog
 	class="max-w-3xl rounded-md border-none p-0 backdrop:bg-black/30"
 	bind:this={dialog}
-	on:close={() => {
-		showing = false;
-	}}
 	on:click|self={() => dialog.close()}
+    on:close
 >
 	<div class="" on:click|stopPropagation>
 		<div class="flex-col flex p-2 w-80 max-w-[95vw]">
